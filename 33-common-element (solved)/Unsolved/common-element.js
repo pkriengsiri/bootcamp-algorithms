@@ -5,12 +5,12 @@
 
 
 var commonElement = function (arrA, arrB) {
-  // const aHashMap = {};
+  // const aMap = {};
   // let result;
-  // arrA.forEach((number) => (aHashMap[number] = true));
-  // // return arrB.find(number => aHashMap[number]);
+  // arrA.forEach((number) => (aMap[number] = true));
+  // // return arrB.find(number => aMap[number]);
   // for(number of arrB) {
-  //   if(aHashMap[number]) {
+  //   if(aMap[number]) {
   //     return number;
   //   }
   // }
