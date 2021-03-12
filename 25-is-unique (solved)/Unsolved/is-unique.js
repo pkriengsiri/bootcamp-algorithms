@@ -1,37 +1,56 @@
 // Write code to create a function that accepts an array numbers
 // Return `true` is no number appears in the array more than once, else return `false`
 
-var isUnique = function(arr) {
-    let previousNumber;
-    console.log(arr);
-    const arrayOfNumbers = [];
-    arr.forEach(index => arrayOfNumbers.push(parseFloat(index)));
-    // arr.forEach(index => console.log(index));
-    arrayOfNumbers.sort();
-    for(let i = 0; i < arrayOfNumbers.length; i++) {
-        if(arrayOfNumbers[i] === arrayOfNumbers[i+1]) {
-            return false;
-        } 
-    }
-    return true;
-};
+// var isUnique = function(arr) {
+//     let previousNumber;
+//     console.log(arr);
+//     const arrayOfNumbers = [];
+//     arr.forEach(index => arrayOfNumbers.push(parseFloat(index)));
+//     // arr.forEach(index => console.log(index));
+//     arrayOfNumbers.sort();
+//     for(let i = 0; i < arrayOfNumbers.length; i++) {
+//         if(arrayOfNumbers[i] === arrayOfNumbers[i+1]) {
+//             return false;
+//         } 
+//     }
+//     return true;
+// };
 
-// this solution is lnown as a has map
-var isUnique = function(arr) {
-    //create an empty object
-    const object = {};
-    //check to see if the object already has that key, if so return false.  Else add the key and set the value to 1.
+// // this solution is known as a hash map
+// var isUnique = function(arr) {
+//     //create an empty object
+//     const object = {};
+//     //check to see if the object already has that key, if so return false.  Else add the key and set the value to 1.
+//     for(let i = 0; i < arr.length; i++) {
+//         if(arr[i] in object) {
+//             //object[arr[i]]++;
+//             return false
+//         } else {
+//             object[arr[i]] = 1;
+//         }
+//     }
+//     return true;
+//     console.log(object);
+// };
+
+// Solution using JS Map object
+const isUnique = (arr) => {
+    // create the map object
+    const arrMap = new Map();
+    // iterate over the array
     for(let i = 0; i < arr.length; i++) {
-        if(arr[i] in object) {
-            //object[arr[i]]++;
-            return false
+        // Check to see if the map has the current array element as a key
+        if(arrMap.has(arr[i])) {
+            // return false if the key exists in the map
+            return false;
         } else {
-            object[arr[i]] = 1;
+            // Add the key to the map
+            arrMap.set(arr[i],1);
         }
     }
+    // return true of no duplicate keys were found
     return true;
-    console.log(object);
-};
+}
 
 isUnique([3, 4, 5, 7, 9]);
 
