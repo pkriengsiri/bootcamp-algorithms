@@ -2,8 +2,7 @@
 // You may not use the built-in Math.sqrt method
 
 var isPerfectSquare = function (num) {
-    if (num ===0) { return true }
-    for (let i = 1; i * i <= num; i++) {
+    for (let i = 0; i * i <= num; i++) {
         if (i * i === num) { return true }
     }
     return false;
