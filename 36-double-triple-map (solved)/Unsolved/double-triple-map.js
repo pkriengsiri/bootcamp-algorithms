@@ -3,7 +3,9 @@
 // If an element in the original array is odd, the element at the same index of the new array should be triple the original element
 
 var doubleTripleMap = function (arr) {
+  // return a copy of the array with the values mutated
   return arr.map((number) => {
+    // check to see if the number is even, then change the value accordingly
     if (number % 2 === 0) {
       return number * 2;
     } else {
