@@ -14,6 +14,9 @@ In this activity you will be writing code to create a function that takes an arr
 
     ```js
     var arr = [1, 2, 3];
+    index 0 to index 1
+    index 1 to index 2
+    index 2 to index 0
     var positions = 2;
     ```
 
