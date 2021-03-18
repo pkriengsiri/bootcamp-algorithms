@@ -10,7 +10,7 @@ In this activity you will be writing code to create a function that takes two st
 
     * If the second string is a substring of the first string, return its starting index in the first string.
 
-    * For example, given the following strings:
+    * For example, given the following stringaas:
 
     ```js
     var str1 = "JavaScript";
